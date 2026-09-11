@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Our Lexend", sans-serif;
     font-weight: 400;
@@ -58,6 +62,21 @@ header .logo {
 .download-buttons img {
     height: 4vw;
     margin: 0;
+    transform: scale(1);
+    transition: transform 120ms ease-out;
+}
+
+.download-buttons img:hover {
+    transform: scale(1.1);
+}
+
+.scroll-down {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 30px;
+    left: 50%; /*starts the scroll button on the middle of the header*/
+    transform: translateX(-50%); /*moves the scroll down 50 percent of its own width to the left, thus centering it*/
 }
 
 .food-image{
